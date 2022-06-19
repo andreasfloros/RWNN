@@ -12,6 +12,10 @@ and provides a powerful denoising engine. The utility of the proposed extends be
 White Gaussian Noise (AWGN) removal; this flexibility is demonstrated in compact representation of images,
 progressive loading, spatially variant noise removal, deblurring and inpainting.
 
+|<img align="center" src="examples/castle/castlen.png" width="320px"/> | <img align="center" src="examples/castle/castlentrans.png" width="320px"/> | <img align="center" src="examples/castle/castlerestrans.png" width="320px"/> | <img align="center" src="examples/rwnn/castle/castleres.png" width="320px"/>|
+|:---:|:---:|:---:|:---:|
+|<i>(a) Noise level 25</i>|<i>(b) Noisy transformed</i>|<i>(c) Denoised transformed</i>|<i>(d) Denoised</i>|
+
 Installation
 ----------
 * Create a virtual environment: `python -m venv env`
