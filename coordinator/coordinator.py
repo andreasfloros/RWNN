@@ -42,7 +42,7 @@ class Coordinator:
                     fyi, loss = self.model.module.test(data, map = map)
                 else:
                     fyi, loss, vis = self.model.module.test(data, map = map, vis = True)
-                    tensors_to_pngs(vis, os.path.join(path, 'rwnn', name), idx, should_crop)
+                    tensors_to_pngs(vis, os.path.join(path, name), idx, should_crop)
                 if torch.isnan(loss) or torch.isinf(loss): raise Exception("nan / inf loss")
                 sum_fyi = update_fyi_dict(sum_fyi, fyi)
                 num_batches += 1

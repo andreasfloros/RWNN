@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     print('')
 
-    dtmins, info = coordinator.test(path = 'examples', map = opt.map)
+    dtmins, info = coordinator.test(path = 'examples/rwnn', map = opt.map)
     print('Time: 'f'{dtmins: .3e} mins')
     for dataset, fyi in info.items():
         print(dataset + ' dataset,' + fyi[0])
