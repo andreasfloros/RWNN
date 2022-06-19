@@ -1,3 +1,4 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
 certifi==2022.6.15
 charset-normalizer==2.0.12
 h5py==3.7.0

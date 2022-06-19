@@ -16,7 +16,7 @@ Installation
 ----------
 * Create a virtual environment: `python -m venv env`
 * Activate venv: `env\Scripts\activate`
-* Install requirements: `pip install requirements.txt`
+* Install requirements: `pip install -r requirements.txt`
 
 
 Training from scratch
