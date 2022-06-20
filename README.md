@@ -14,7 +14,7 @@ progressive loading, spatially variant noise removal, deblurring and inpainting.
 
 |<img align="center" src="examples/castle/castlen.png" width="240px"/> | <img align="center" src="examples/castle/castlentrans.png" width="240px"/> | <img align="center" src="examples/castle/castlerestrans.png" width="240px"/> | <img align="center" src="examples/castle/castleres.png" width="240px"/>|
 |:---:|:---:|:---:|:---:|
-|<i>(a) Noisy image, noise level 25</i>|<i>(b) Noisy transformed</i>|<i>(c) Denoised transformed</i>|<i>(d) Denoised</i>|
+|<i>(a) Noisy image, σ=25</i>|<i>(b) Noisy transformed</i>|<i>(c) Denoised transformed</i>|<i>(d) Denoised</i>|
 
 Installation
 ----------
