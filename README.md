@@ -12,7 +12,7 @@ and provides a powerful denoising engine. The utility of the proposed extends be
 White Gaussian Noise (AWGN) removal; this flexibility is demonstrated in compact representation of images,
 progressive loading, spatially variant noise removal, deblurring and inpainting.
 
-|<img align="center" src="examples/castle/castlen.png" width="200px"/> | <img align="center" src="examples/castle/castlentrans.png" width="200px"/> | <img align="center" src="examples/castle/castlerestrans.png" width="200px"/> | <img align="center" src="examples/castle/castleres.png" width="200px"/>|
+|<img align="center" src="examples/castle/castlen.png" width="160px"/> | <img align="center" src="examples/castle/castlentrans.png" width="160px"/> | <img align="center" src="examples/castle/castlerestrans.png" width="160px"/> | <img align="center" src="examples/castle/castleres.png" width="160px"/>|
 |:---:|:---:|:---:|:---:|
 |<i>(a) Noisy image, σ=25</i>|<i>(b) Noisy transformed</i>|<i>(c) Denoised transformed</i>|<i>(d) Denoised</i>|
 
