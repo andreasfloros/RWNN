@@ -38,3 +38,14 @@ Pretrained RWNN-DAE and RWNN-F are found in the `logs` folder (epoch 41 and 73 r
 * `python deblur.py -h` and `python inpaint.py -h` for Plug-and-Play Prior (P3) deblurring and inpainting respectively.
 
 The default data for testing is Set12 and the results are included in the `examples` folder.
+
+Citation
+----------
+```BibTex
+@mastersthesis{floros2022beyond,
+  author={Andreas Floros},
+  title={{Beyond Wavelets: Wavelet-Inspired Invertible Neural Networks for Image Modelling and Approximation}},
+  school={Imperial College London},
+  year={2022}
+}
+```
