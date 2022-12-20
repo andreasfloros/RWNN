@@ -12,9 +12,30 @@ and provides a powerful denoising engine. The utility of the proposed extends be
 White Gaussian Noise (AWGN) removal; this flexibility is demonstrated in compact representation of images,
 progressive loading, spatially variant noise removal, deblurring and inpainting.
 
-|<img align="center" src="examples/castle/castlen.png" width="160px"/> | <img align="center" src="examples/castle/castlentrans.png" width="160px"/> | <img align="center" src="examples/castle/castlerestrans.png" width="160px"/> | <img align="center" src="examples/castle/castleres.png" width="160px"/>|
+RWNN-F: RWNN with Fusion Denoising
+----------
+
+![RWNN-F](assets/dn.svg)
+
+The proposed architecture is a blind denoising neural network tailored for spatially variant Gaussian
+noise removal.
+
+A high level description of the model is shown in the above figure. It consists of
+* a forward transform operator (RWNN)
+* a processing step in the transformed domain (FusionNet)
+* an inverse transform (RWNN<sup>−1</sup>) 
+
+RWNN consists of a Lifting Inspired Neural Network (LINN) and a Noise Estimation Network (NENet) which predicts noise level maps Σ. It is responsible for separating
+the clean signal (coarse) from noisy residuals (details). In the transformed domain, a denoising sub-network
+based on the principles of SC is used to denoise the aforementioned residuals and the result, together with
+the coarse, is back-projected to the original domain via RWNN−1. Note that RWNN-F may be repeated on the
+coarse parts to obtain better results, if the noise variance is large.
+
+|<img align="center" src="assets/castlen.png" width="160px"/> | <img align="center" src="assets/castlentrans.png" width="160px"/> | <img align="center" src="assets/castlerestrans.png" width="160px"/> | <img align="center" src="assets/castleres.png" width="160px"/>|
 |:---:|:---:|:---:|:---:|
 |<i>(a) Noisy image, σ=25</i>|<i>(b) Noisy transformed</i>|<i>(c) Denoised transformed</i>|<i>(d) Denoised</i>|
+
+RWNN-F is a divide and conquer algorithm which can be applied recursively on the coarse parts. An example application up to recursion depth 3 is shown above.
 
 Installation
 ----------
@@ -38,3 +59,14 @@ Pretrained RWNN-DAE and RWNN-F are found in the `logs` folder (epoch 41 and 73 r
 * `python deblur.py -h` and `python inpaint.py -h` for Plug-and-Play Prior (P3) deblurring and inpainting respectively.
 
 The default data for testing is Set12 and the results are included in the `examples` folder.
+
+Citation
+----------
+```BibTex
+@mastersthesis{floros2022beyond,
+  author={Andreas Floros},
+  title={{Beyond Wavelets: Wavelet-Inspired Invertible Neural Networks for Image Modelling and Approximation}},
+  school={Imperial College London},
+  year={2022}
+}
+```
