@@ -28,7 +28,7 @@ A high level description of the model is shown in the above figure. It consists 
 RWNN consists of a Lifting Inspired Neural Network (LINN) and a Noise Estimation Network (NENet) which predicts noise level maps Σ. It is responsible for separating
 the clean signal (coarse) from noisy residuals (details). In the transformed domain, a denoising sub-network
 based on the principles of SC is used to denoise the aforementioned residuals and the result, together with
-the coarse, is back-projected to the original domain via RWNN−1. Note that RWNN-F may be repeated on the
+the coarse, is back-projected to the original domain via RWNN<sup>−1</sup>. Note that RWNN-F may be repeated on the
 coarse parts to obtain better results, if the noise variance is large.
 
 |<img align="center" src="assets/castlen.png" width="160px"/> | <img align="center" src="assets/castlentrans.png" width="160px"/> | <img align="center" src="assets/castlerestrans.png" width="160px"/> | <img align="center" src="assets/castleres.png" width="160px"/>|
