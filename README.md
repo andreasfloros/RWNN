@@ -1,4 +1,4 @@
-# RWNN
+# RWNN: Recursive Wavelet Neural Networks
 Andreas Floros, *Imperial College London, United Kingdom*
 
 Abstract
