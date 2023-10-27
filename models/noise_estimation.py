@@ -1,7 +1,6 @@
 import torch
-import torch.jit as jit
 
-class NENet(jit.ScriptModule):
+class NENet(torch.nn.Module):
     def __init__(self, psz = 8, stride = 1, num_layers = 8, f_ch = 16):
         super().__init__()
         self.psz = psz
@@ -30,7 +29,6 @@ class NENet(jit.ScriptModule):
         if isinstance(m, torch.nn.Conv1d):
             torch.nn.init.kaiming_uniform_(m.weight, a = 0.0, mode = 'fan_out', nonlinearity= 'relu')
 
-    @jit.script_method
     def forward(self, img):
         if self.override_flag: return self.override * torch.ones((1), device = 'cuda')
         '''Unfold input image into patches'''
